@@ -7,15 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['photo-list.component.css'],
  
 })
-export class PhotoListComponent implements OnActivate {
-  private currSegment: RouteSegment;
+export class PhotoListComponent  {
   public path: string;
 
   constructor() {}
 
-  routerOnActivate(curr: RouteSegment, prev: RouteSegment, currTree: RouteTree) {
-    this.currSegment = curr;
-    this.path="/photo";
+  routerOnActivate() {
     /*We might not need this now! But we might need it later. Not sure man!*/
   }
 

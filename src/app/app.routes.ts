@@ -9,6 +9,10 @@ import {VideoDetailComponent} from './+video/video-detail/video-detail.component
 import { NewsComponent } from './+news/news.component';
 import { NewsListComponent } from './+news/news-list/news-list.component';
 
+import {PhotoComponent} from './+photo/photo.component';
+import {PhotoListComponent} from './+photo/photo-list/photo-list.component'; 
+import { PhotoDetailComponent} from './+photo/photo-detail/photo-detail.component';
+
 import { AppComponent} from './app.component';
 
 import {HomeComponent} from './+home/home.component';
@@ -42,7 +46,17 @@ const routes: Routes = [
                 component: NewsListComponent
             }
         ]
-    }    
+    },
+    {
+        path:'photo',
+        component : PhotoComponent,
+        children: [
+            {
+                path: '',
+                component: PhotoListComponent
+            }
+        ]
+    }       
 ];
 
 // - Updated Export

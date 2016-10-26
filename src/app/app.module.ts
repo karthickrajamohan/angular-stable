@@ -32,11 +32,17 @@ import {NewsComponent} from './+news/news.component';
 import { NewsListComponent } from './+news/news-list/news-list.component';
 
 import {PhotoBlockComponent} from './+photo/photo-block/photo-block.component';
-import {PhotoService} from './+photo/photo.service';
+import {Photo,PhotoService} from './+photo/photo.service';
+import {PhotoComponent} from './+photo/photo.component';
+import {PhotoListComponent} from './+photo/photo-list/photo-list.component'; 
+import { PhotoDetailComponent} from './+photo/photo-detail/photo-detail.component';
+
 
 import {LightboxComponent} from './lightbox/lightbox.component';
 
 import {SocialButtonsComponent} from './shared/social-buttons/social-buttons.component';
+
+import {TaxonomyListComponent} from './taxonomy-list/taxonomy-list.component'
 
 
 
@@ -44,7 +50,8 @@ import {SocialButtonsComponent} from './shared/social-buttons/social-buttons.com
   declarations: [AppComponent,VideoComponent,VideoBlockComponent,
     VideoListComponent,VideoDetailBlockComponent,BlockComponent,HomeComponent,TourComponent,
     TourSearch,TourBlockComponent,NewsBlockComponent,PhotoBlockComponent,LightboxComponent,SocialButtonsComponent,
-    NewsComponent,NewsListComponent,VideoDetailComponent
+    NewsComponent,NewsListComponent,VideoDetailComponent,PhotoComponent,PhotoListComponent,PhotoDetailComponent,
+    TaxonomyListComponent
   ],
   imports: [
     BrowserModule,

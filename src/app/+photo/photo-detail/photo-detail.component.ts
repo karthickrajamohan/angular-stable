@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { Photo, PhotoService } from '../photo.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-photo-detail',
   templateUrl: 'photo-detail.component.html',
   styleUrls: ['photo-detail.component.css'],
  
 })
-export class PhotoDetailComponent implements OnActivate {
+export class PhotoDetailComponent  {
   @Input() photo: Photo;
   public id:string;
 
@@ -14,13 +15,7 @@ export class PhotoDetailComponent implements OnActivate {
       private _router: Router) {
   }
   
-  routerOnActivate(curr: RouteSegment): void {
-    this.id = curr.getParam('id');
-    this._photoService.getPhoto(this.id).subscribe(
-      data => this.photo = data[0],
-      err => console.error(err),
-      () => console.log('done')
-    );
+  routerOnActivate(): void {
     
   }
 

@@ -1,0 +1,10 @@
+<div class="block">
+  <!--<h2>{{blockTitle}}</h2> Not required in this style-->
+  <ul class="taxonomy {{cols}}">
+    <li  *ngFor="let t of taxonomy">
+      <div>
+        <a [routerLink]="['/'+path+'/'+t.name]">{{t.name}}</a>
+        </div>
+    </li>
+  </ul>
+</div>

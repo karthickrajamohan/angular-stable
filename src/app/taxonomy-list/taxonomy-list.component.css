@@ -1,0 +1,20 @@
+ul.taxonomy li {
+    display: inline-block;
+    margin: 0px 20px;
+    text-transform: uppercase;
+}
+
+ul.taxonomy a {
+    color: #807c9c;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+ul.taxonomy li:first-child {
+    margin-left: 0;
+}
+
+ul.taxonomy a.router-link-active{
+    color: #1b214e;
+    font-weight: bold;
+}
