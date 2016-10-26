@@ -1,0 +1,16 @@
+<div class="album block {{customClass}}">
+  <h2 *ngIf="headerText">{{headerText}}</h2>
+  <ul class="album {{cols}}">
+    <li class="col" *ngFor="let album of albums | slice:0:count" [class.selected]="album === selectedAlbum">
+      <div class="content" (click)="gotoDetail(album)">
+      <div class="albumArt" [innerHTML]="album.albumArt"></div>
+      <div class="body">
+        <h3>
+          {{album.title}}
+        </h3>
+        <span>{{album.releaseDate}}</span>
+      </div>
+      </div>
+    </li>
+  </ul>
+</div>

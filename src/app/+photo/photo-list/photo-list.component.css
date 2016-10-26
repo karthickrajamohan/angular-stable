@@ -1,0 +1,27 @@
+h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.g-layout.photo-list{
+    padding-top: 34px;
+    padding-bottom: 0;
+}
+.g-layout {
+    padding-top: 20px;
+}
+.buttonWrapper {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.button{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.button:hover{
+    color: #fff;
+    background: #1b214e;
+}

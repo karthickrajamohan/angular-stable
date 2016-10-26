@@ -1,3 +1,28 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="fixed-nav">
+    <app-block blockID="21" class="logo-block"></app-block>
+    <nav class="g-layout">
+      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['/news']">News</a>
+      <a [routerLink]="['/photo']">Photo</a>
+      <a [routerLink]="['/music']">Music</a>
+      <a [routerLink]="['/video']">Videos</a>
+      <a [routerLink]="['/tour']">Tour</a>
+    </nav>
+    <div class="nav-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <app-block blockID="16" class="signup-block"></app-block>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="merchPanel">
+    <div class="g-layout">
+      <h2><span>POPULAR</span> MERCHANDISE</h2>
+      <!--<app-merch [count]="3" [cols]="'grid-3_xs-1'"></app-merch>-->
+      <div class="buttonWrapper">
+        <a class="button reverse-button" target="_blank" href="/store">Shop All</a>
+      </div>
+    </div>
+  </div>
+  <app-block blockID="11"></app-block>
+</div>

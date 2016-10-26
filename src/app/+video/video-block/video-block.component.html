@@ -1,0 +1,11 @@
+<div class="video block {{customClass}}">
+  <h2 *ngIf="headerText">{{headerText}}</h2>
+  <ul class="videos {{cols}}">
+    <li class="col"  *ngFor="let video of videos | slice:0:count"
+      [class.selected]="video === selectedVideo">
+      <div class="thumbnail" [innerHTML]="video.thumbnail" (click)="gotoDetail(video)"></div>     
+      <h3 *ngIf="!minimal" (click)="gotoDetail(video)">{{video.title}}</h3>
+      <div *ngIf="!minimal" class="created">{{video.created}}</div>
+    </li>
+  </ul>
+</div>

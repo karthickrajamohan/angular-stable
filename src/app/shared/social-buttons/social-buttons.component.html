@@ -1,0 +1,14 @@
+<div *ngIf="link" class="share {{customClass}}" >
+  <div class="fs-tw" *ngIf="twitter" (click)="twitterClick()">
+    Twitter
+  </div>
+  <div class="fs-fb" *ngIf="facebook" (click)="facebookClick()">
+    Facebook
+  </div>
+  <div class="fs-gp" *ngIf="googlePlus" (click)="googlePlusClick()">
+    Google Plus
+  </div>
+  <div class="fs-mail" *ngIf="mailto" (click)="mailtoClick()">
+    Mail To
+  </div>
+</div>

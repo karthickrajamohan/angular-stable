@@ -1,0 +1,62 @@
+<app-block blockID="1" class="herovideoBlock"></app-block>
+<div class="homePanelCon musicPanel">
+    <div class="g-layout">
+        <h2>The <span>Live</span> Album</h2>
+        <div class="music-content">
+            <h2>Choose your listening experience</h2>
+            <br>
+            <h2>Below for <span>Live Album</span></h2>
+        </div>
+        <div class="players">
+            <div class="spotify">
+                <div></div><span>Spotify</span></div>
+            <div class="apple">
+                <div></div><span>Apple</span></div>
+            <div class="youtube">
+                <div></div><span>Youtube</span></div>
+            <div class="soundcloud">
+                <div></div><span>Sound cloud</span></div>
+        </div>
+        <div class="buttonWrapper">
+            <a class="button" [routerLink]="['/music']">More Music</a>
+        </div>
+    </div>
+</div>
+<div class="homePanelCon tourPanel">
+    <div class="g-layout">
+        <app-block blockID="36" class="homepage-tour-track"></app-block>
+        <h2>The <span>Live</span> Tour</h2>
+        <app-tour-block [detailPath]="path" [count]="5" [customClass]="'homepage'" [cols]="'grid-5_xs-1'">
+        </app-tour-block>
+        <div class="buttonWrapper">
+            <a class="button reverse-button" [routerLink]="['/tour']">View All Dates</a>
+        </div>
+    </div>
+</div>
+<div class="homePanelCon newsPanel">
+    <div class="g-layout">
+        <h2><span>Live</span> News</h2>
+        <app-news-block [count]="3" [cols]="'grid-3_xs-1'" [detailPath]="'/news'" [customClass]="'home-page'"></app-news-block>
+        <div class="buttonWrapper">
+            <a class="button reverse-button" [routerLink]="['/news']">More News</a>
+        </div>
+    </div>
+</div>
+<div class="homePanelCon videoPanel">
+    <div class="g-layout">
+        <h2><span>Live</span> Video</h2>
+        <app-video-detail-block [frontpage]='true' [minimal]="true" [customClass]="'homepage-block'"></app-video-detail-block>
+        <div class="buttonWrapper">
+            <a class="button reverse-button" [routerLink]="['/video']">View all videos</a>
+        </div>
+    </div>
+</div>
+<div class="homePanelCon photoPanel">
+    <div class="g-layout">
+        <h2><span>Live</span> Photos</h2>
+        <app-photo-block [showMoreButton] = false [count]="5" [cols]="'grid-5_xs-1'" [detailPath]="'/photo'"></app-photo-block>
+        <div class="buttonWrapper">
+            <a [routerLink]="['/photo']" class="button reverse-button" >View All Galleries</a>
+        </div>
+    </div>
+</div>

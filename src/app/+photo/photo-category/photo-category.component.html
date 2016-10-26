@@ -1,0 +1,13 @@
+<div class="category-list">
+    <div class="g-layout">
+        <h2>PHOTOS</h2>
+    </div>
+    <div class="taxonomy-list">
+        <div class="g-layout">
+            <app-taxonomy-list name="photo" blockTitle="Photo Category" path="photo/category"></app-taxonomy-list>
+        </div>
+    </div>
+    <div class="g-layout">
+        <app-photo-block [count]="5" [category]="categoryName" [detailPath]="'photo'" [cols]="'grid-5_xs-3'"></app-photo-block>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+h2{
+    text-align: left;
+    font-size: 22px;
+    color: #807c9c;
+    margin: 0;
+    padding: 0;    
+    font-weight: 600;
+}
+.created {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #807c9c;    
+    padding-bottom: 60px;
+}
+
+.body {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    font-size: 14px;
+}
+.detail-list{
+    background: #040514; 
+    color: #fff;  
+}
+.detail-list .g-layout{
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    position: relative;
+}
+h3{
+    color: #1b214e;
+}
+.related .g-layout {
+    padding-top: 70px;
+    padding-bottom: 50px;    
+}
+.detail-block h2 {
+    padding: 0 0 10px 0;
+}
+.related a {
+    color: #807c9c;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.related h2{
+    display: inline-block;
+}
+.related .g-layout{
+    position: relative;
+}
+.ytfollow-wrapper span {
+    display: none;
+}
+.ytfollow {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    h2{        
+        margin-top: 48px;
+        padding-bottom: 12px;
+        font-size: 24px;
+        padding: 0;
+        display: inline-block;
+    }
+    .created {
+        padding-bottom: 32px;
+    }  
+    .detail-block h2{
+        font-size: 22px;
+        margin-top: 16px;
+    }
+    .detail-list .g-layout{
+        padding-top: 15px;
+        padding-bottom: 64px;
+    }
+    .related .g-layout {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+    h2 + span {
+        float: right;
+    }
+    .related h2 {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .ytfollow-wrapper {
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        display: table;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .ytfollow-wrapper span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+    }
+    .ytfollow {
+        display: table-cell;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}

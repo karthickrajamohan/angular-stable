@@ -1,0 +1,36 @@
+<div *ngIf="album" class="album-detail">
+  <div class="g-layout clear-fix">
+    <div class="left-wrapper">
+      <img [src]="album.albumArt" />
+    </div>
+    <div class="right-wrapper">
+      <h2> <span> {{album.title}}</span></h2>
+      <div class="created">{{album.releaseDate}}</div>
+      <div class="getAlbum"><a class="button reverse-button" href="" target="_blank">GET THE ALBUM</a></div>
+    </div>
+    <div class="embed-list">
+      <h2>HOW DO YOU WANT TO LISTEN?</h2>
+      <div class="service">
+        <span [ngClass]="{active: i===selectedIndex}" *ngFor="let list of embedList,let i=index" class="{{list.service}}" (click)="displayEmbed(list,i)">{{list.service}}</span>
+      </div>
+      <div class="embed">
+        <div [ngSwitch]="visibleEmbed" *ngFor="let list of embedList">
+          <div *ngSwitchWhen="list.service" [innerHTML]="list.embed" class="iframeWrapper {{list.service}}"></div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="trackList" class="tracks">
+      <div class="track-title">SELECT A TRACK BELOW <br> TO VIEW LYRICS </div>
+      <div class="track-list">
+        <div *ngFor="let track of trackList;let i=index"><span>{{i + 1}}</span><a href="{{track.path}}" [innerHTML]="track.trackname"></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="album-merch-block">
+    <div class="g-layout">
+      <h2><span>{{album.title}}</span> THE ALBUM</h2>
+      <app-album-block [detailPath]="'/album'" [customClass]="'listPanel'" [count]="3" [cols]="'grid-3_xs-2'">
+      </app-album-block>
+    </div>
+  </div>
+</div>

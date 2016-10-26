@@ -1,0 +1,32 @@
+<div class="tour block {{customClass}}">
+    <h2 *ngIf="headerText">{{headerText}}</h2>
+    <div class="search"><input id="close" type="text" #tourSearchInput placeholder="Search For City" required (keyup)="0" /> 
+    <span class="closeBtn" (click)="clearInput()"></span></div>
+    <ul *ngIf="tour">
+        <li class="grid" *ngFor="let t of (tour 
+            | tourSearch:tourSearchInput.value )
+            | slice:0:count ">
+            <div class="col-1_sm-3 date">
+                {{t.date | date:"MMM"}}
+                <span>{{t.date | date:"dd"}}</span>
+            </div>
+            <div class="col-6_sm-9 grid venue">
+                <div class="col-6_sm-12">{{t.venue}}</div>
+                <div class="col-6_sm-12">{{t.city}}, {{t.state}}</div>
+                <div class="col-6_sm-12" push-left="off-6">{{t.country}}</div>
+            </div>
+            <div class="col-5_sm-12 grid">
+                <div class="col-3_sm-3 vip">
+                    <a *ngIf="t.vip" class="tourbt" href="{{t.vip}}">VIP</a>
+                </div>
+                <div class="col-4_sm-4 rsvp">
+                    <a class="tourbt" href="{{t.RSVP}}">RSVP</a>
+                </div>
+                <div class="col-5_sm-5 ticket">
+                    <a class="tourbt" *ngIf="t.status == 'available'" href="{{t.ticketLink}}">Tickets</a>
+                    <span *ngIf="t.status == 'unavailable'">Sold Out!</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

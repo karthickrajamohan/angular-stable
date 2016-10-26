@@ -1,0 +1,18 @@
+<div class="detail-list">
+	<div class="g-layout">
+		<div *ngIf="id">
+			<app-video-detail-block [id]='id' [customClass]="'detail-block'"></app-video-detail-block>
+		</div>
+		<app-social-buttons [link]='id'></app-social-buttons>
+	</div>
+</div>
+<div class="related">
+	<div class="g-layout">
+		<h2>Related Videos</h2>&nbsp;<span><a [routerLink]="['/video/category/all']"> View All</a></span>
+		<app-video-block [detailPath]="'/video'" [count]="3" [cols]="'grid-3_xs-1'"></app-video-block>
+		<div class="ytfollow-wrapper">
+			<span>FOLLOW ON</span>&nbsp;&nbsp;
+			<app-block blockID="41" class="ytfollow"></app-block>
+		</div>
+	</div>
+</div>

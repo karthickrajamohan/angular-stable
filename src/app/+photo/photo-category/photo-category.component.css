@@ -1,0 +1,23 @@
+.g-layout h2 {
+    padding: 0;
+    text-align: left;
+    font-weight: 600;
+}
+.g-layout:first-child,.g-layout:last-child  {
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+ul.photos li:first-child {
+    padding-left: 0px;
+}
+.category-list {
+    padding-top: 14px;
+}
+@media only screen and (max-width: 767px){
+    .g-layout h2 {
+        margin: 0;
+    }
+    h2{
+        font-size: 22px;
+    }    
+}

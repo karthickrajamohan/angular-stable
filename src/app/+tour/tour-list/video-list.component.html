@@ -1,0 +1,30 @@
+<div class="video-banner">
+	<img src="assets/i/Video-banner.jpg" typeof="foaf:Image">
+	<span>VIDEOS</span>
+	<div class="quotes">"Quote"
+		<div>Source, Year</div>
+	</div>
+</div>
+<div class="landing-list">
+	<div class="videoPanelCon">
+		<div class="g-layout">
+			<app-video-detail-block [frontpage]='true' [customClass]="'landing-block'"></app-video-detail-block>
+		</div>
+	</div>
+	<div class="g-layout">
+		<h2>Official</h2>&nbsp;<span><a [routerLink]="['/video/category/official']"> View All</a></span>
+		<app-video-block [customClass]="'listPanel'" [category]="'Official'" [detailPath]="path" [count]="4" [cols]="'grid-4_xs-2'"></app-video-block>
+		<div class="ytfollow-wrapper">
+			<span>FOLLOW ON</span>&nbsp;&nbsp;
+			<app-block blockID="41" class="ytfollow"></app-block>
+		</div>
+	</div>
+	<div class="g-layout">
+		<h2>Instagram</h2>&nbsp;<span><a [routerLink]="['/video/category/instagram']"> View All</a></span>
+		<app-video-block [customClass]="'listPanel'" [category]="'Instagram'" [detailPath]="path" [count]="4" [cols]="'grid-4_xs-2'"></app-video-block>
+	</div>
+	<div class="g-layout">
+		<h2>Pro</h2><span>&nbsp;<a [routerLink]="['/video/category/pro']"> View All</a></span>
+		<app-video-block [customClass]="'listPanel'" [category]="'Pro'" [detailPath]="path" [count]="4" [cols]="'grid-4_xs-2'"></app-video-block>
+	</div>
+</div>

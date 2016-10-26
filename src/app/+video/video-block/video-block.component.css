@@ -1,0 +1,135 @@
+ul.videos
+{
+    list-style-type: none;
+    padding: 0px;  
+    font-weight: 600;
+}
+ul.videos li img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.videos li {
+    position: relative;   
+}
+.play_button{
+    display: none;
+}
+
+.thumbnail:hover:after {
+    background: url("assets/i/play.png") no-repeat 0 0 transparent;
+    width: 45px;
+    height: 48px;
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 48px / 2);
+    left: calc(50% - 45px / 2);
+    cursor: pointer;
+    content: '';
+}
+
+ul.videos h3 {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #1b214e;
+    font-weight: 600;
+    line-height: 1.25;
+}
+.created{
+    font-size: 19px;
+    color: #807c9c;
+    font-family: proxima-nova-condensed;
+}
+
+div{
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: left;
+    font-size: 22px;
+    padding: 0;
+    color: #807c9c;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 1;
+}
+
+h2 + span {
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 600;
+    color: #807c9c;
+}
+.col {
+    padding-bottom: 0;
+    margin-bottom: 0;
+} 
+
+.thumbnail:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27,33,78,0.78);
+}
+
+.thumbnail {
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 0;
+    position: relative;
+}
+
+.category-block .videos li {
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+.category-block{
+    padding-bottom: 60px;
+}
+@media only screen and (max-width: 767px) {  
+    ul.videos h3{
+        font-size: 12px;       
+    }      
+    h2 + span {
+        float: right;
+    }  
+    .created {
+        font-size: 12px; 
+        padding-bottom: 20px; 
+    }
+    .g-layout + h2{
+        font-size: 20px;
+    }
+    h2,.category-block .videos li{
+        padding-bottom: 20px;
+    } 
+    .category-block {
+        padding-bottom: 0px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    ul.videos li {
+        padding-top: 30px;
+    }  
+    .listPanel ul.videos li {
+       padding-right: 5px;           
+    }
+    .related h2{
+        display: inline-block;
+    }
+    .related a {
+        color: #807c9c;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }               
+}
+
+

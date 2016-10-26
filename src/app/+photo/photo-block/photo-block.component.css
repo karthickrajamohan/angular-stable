@@ -1,0 +1,55 @@
+ul.photos
+{
+    list-style-type: none;
+    padding: 0px;
+    font-weight: 600;
+}
+
+ul.photos li{
+    display: inline-block;
+    margin-left: -4px;
+    width: 33%;
+    box-sizing: border-box;
+    padding: 20px;
+    vertical-align: top;
+}
+
+ul.photos li img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+ul.photos h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.thumbnail {
+    max-height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.created {
+    font-size:19px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #807c9c;  
+    font-family: proxima-nova-condensed;
+}
+
+.buttonWrapper {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.button{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.button:hover{
+    color: #fff;
+    background: #1b214e;
+}

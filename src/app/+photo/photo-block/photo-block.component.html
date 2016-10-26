@@ -1,0 +1,14 @@
+<div class="block photos">
+<h2 *ngIf="headerText">{{headerText}}</h2>
+<ul class="photos {{cols}}">
+  <li class="col"  *ngFor="let photo of photos;let i = index"
+    [class.selected]="photo === selectedPhoto">
+    <div class="thumbnail" (click)= "setSelectedPhoto(photos,i)" ><img [src]="photo.field_photo"/></div>
+    <!-- <div class="thumbnail" (click)="gotoDetail(photo,linkToCategory)"   [innerHTML]="photo.field_photo"></div>-->
+  </li>
+</ul>
+<div *ngIf="selectedPhoto"><app-lightbox (onClose)="lightboxClose($event)" [selectedIndex]="selectedIndex" [photo]="selectedPhoto" ></app-lightbox></div>
+<div *ngIf ="showMoreButton" class="buttonWrapper" (click)="loadMorePhotos()">
+    <a *ngIf ="noData" class="button">MORE Photos</a>
+</div>
+<div>

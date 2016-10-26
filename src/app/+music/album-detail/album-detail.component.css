@@ -1,0 +1,194 @@
+.left-wrapper div {
+    width: 236px;
+    display: inline-block;
+}
+.album-detail{
+    background: #040514; 
+    color: #f6f5fd;
+}
+.left-wrapper,.right-wrapper{
+    float: left;
+    font-size: 0;
+    width: 48%;
+}
+.left-wrapper{
+    text-align: right;
+    padding-right: 65px;
+    box-sizing: border-box;
+}
+.right-wrapper{
+    width: 52%;
+}
+.created {
+    font-size: 19px;
+    padding-bottom: 27px;
+    text-transform: uppercase;
+    font-family: proxima-nova-condensed,Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+.album-detail h2 {
+    padding-bottom: 10px;
+    text-align: left;
+}
+.album-detail .g-layout{
+    padding-top: 90px;
+}
+.album-merch-block .g-layout{
+    padding-top: 0px;
+}
+.right-wrapper h2 span {
+    font-weight: 600;
+}
+.button{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.album-merch-block{
+    background: #181a33;
+    background-image: linear-gradient( -90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+}
+.album-merch-block h2{
+    color: #ffffff;
+    text-align: left;
+    padding-top: 55px;
+    padding-bottom: 40px;
+}
+.tracks {
+    width: 52%;
+    float: right;
+    padding-top: 76px;
+    text-align: left;
+}
+.track-list {
+    padding-top: 28px;
+    font-size: 19px;
+}
+.track-list a{
+    color: #f6f5fd;
+}
+.track-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.track-list div {
+    padding-bottom: 10px;
+}
+.track-list span {
+    margin-right: 15px;
+}
+.clear-fix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.embed-list {
+    float: left;
+    clear: left;
+    width: 48%;
+    padding: 80px 65px 0;
+    box-sizing: border-box;
+}
+.embed-list h2{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+}
+.left-wrapper img{
+    max-width: 230px;
+}
+.service span{    
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -9999px;
+    margin-right: 25px;
+}
+.service span:last-child{
+    margin-right: 0;
+}
+.service span.Apple {
+    background: url("assets/i/streaming-apple.png")no-repeat;
+    width: 28px;
+    height: 31px;
+}
+.service span.Apple.active{
+    background-position: 0px -41px;
+}
+.service span.Youtube {
+    background: url("assets/i/streaming-youtube.png")no-repeat;
+    height: 32px;
+    width: 32px;
+}
+.service span.Youtube.active{
+    background-position: 0px -44px;
+}
+.service span.Soundcloud {
+    background: url("assets/i/streaming-soundcloud.png")no-repeat;
+    width: 56px;
+    height: 25px;    
+    vertical-align: sub;
+}
+.service span.Soundcloud.active{
+    background-position: 0 -25px;
+}
+.service span.Deezer{
+    background: url("assets/i/streaming-deezer.png")no-repeat;
+    width: 57px;
+    height: 32px;
+}
+.service span.Deezer.active{
+    background-position: 0px -42px;
+}
+.service span.Spotify{
+    background: url("assets/i/streaming-spotify.png")no-repeat;
+    height: 31px;
+    width: 31px;
+}
+.service span.Spotify.active{
+    background-position: 0px -41px;
+}
+
+.service {
+    padding: 40px 0 35px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .left-wrapper {
+        width: 40%;
+        padding-right: 15px;
+    }
+    .right-wrapper {
+        width: 60%;
+    }
+    .left-wrapper div {
+        width: 80%;
+    }
+    .album-detail .g-layout {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+    .tracks{
+        width: 100%;
+        padding-top: 45px;
+    }
+    .right-wrapper h2 {
+        font-size: 15px;
+        text-align: left;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .created{
+        font-size: 12px;
+    }
+    .button{
+        font-size: 12px;
+    }
+    .embed-list{
+        width: 100%;
+        padding: 65px 0 0 0;
+    }
+}

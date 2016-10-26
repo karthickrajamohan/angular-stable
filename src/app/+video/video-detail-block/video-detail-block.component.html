@@ -1,0 +1,13 @@
+<div class="block {{customClass}}">
+	<div *ngIf="video">
+		<!--<a [routerLink]="['/video']">&larr; Back to Videos </a>-->
+		<div class="video">
+			<div class="responsive-video-container" [innerHTML]="video.field_video"></div>
+		</div>
+		<div *ngIf="!minimal" class="header">
+			<h2>{{video.title}}</h2>
+			<div class="created">{{video.created}}</div>
+		</div>
+		<div *ngIf="!minimal" class="body" [innerHTML]="video.body"></div>
+	</div>
+</div>

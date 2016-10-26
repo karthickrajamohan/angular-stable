@@ -1,0 +1,10 @@
+<div [class.playing]="isPlaying">
+  <div *ngIf="albumart" class="thumbnail">
+    <!--<div [style.background-image]="'url('')'" ></div>-->
+    <img [src]="albumart" />
+    <div class="play"><a *ngIf="!isPlaying" (click)="play()"> Play</a></div>
+    <div class="pause"><a *ngIf="isPlaying" (click)="pause()">Pause </a></div>
+  </div>
+  <div class="player"><input [value]="currentTime" type="range" max="30" (input)="seek($event)" step=".001" />
+    <span> 0:{{(currentTime % 60) | number:'2.0-0'}}</span></div>
+</div>

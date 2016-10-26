@@ -1,0 +1,17 @@
+<div class="news-banner">
+  <img src="assets/i/news-banner.jpg" typeof="foaf:Image">
+  <span>NEWS</span>
+</div>
+<div>
+  <div class="latest">
+  <div class="g-layout">
+    <app-news-block [detailPath]="path" [count]="4" [cols]="'grid-2_xs-1'" [customClass]="'photo-list'" [headerText]="'Latest Updates'"></app-news-block>
+  </div>
+  </div>
+  <div class="exclusive">
+    <div class="g-layout">
+      <app-news-block [detailPath]="path" [count]="3" [cols]="'grid-3_xs-1'" [customClass]="'exclusive-list'" [minimal]="true"
+        [headerText]="'Exclusive Updates'"></app-news-block>
+    </div>
+  </div>
+</div>

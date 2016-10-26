@@ -1,0 +1,80 @@
+.share{
+    position: absolute; 
+    left: 0;
+    top: 205px;
+    opacity: 1; 
+    display: inline-block;
+}
+.share div{
+    background: transparent url("assets/i/social-icon.png") no-repeat scroll 0 0;
+    clear: both;
+    margin: 0 auto;
+    width: 2.68em;
+    height: 2.68em;
+    color: #1b214e;
+    display: block;
+    text-indent: -9999px;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+.share div:hover{
+    background: transparent url("assets/i/social-icon-hover.png") no-repeat scroll 0 0;
+}
+.share div {
+    clear: both;
+    margin: 0 auto;
+    color: #1b214e;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    height: 2.68em;
+    line-height: 2.68em;
+}
+.share div.fs-fb {
+    background-position: 0px -48px;
+}
+.share div.fs-gp {
+    background-position: 0px -96px;
+}
+.share div.fs-mail{
+    background-position: 0px -143px;
+}
+.news-detail-social {
+    left: 60px;
+    top: 180px;
+}
+.share.photo-lightbox{
+    left: -62px;
+    top: 0;
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .share {
+        position: relative;
+        opacity: 1;
+        display: inline-block;
+        left: 0px;
+        top: 0px;
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .share div {
+        clear: both;
+        margin: 0 auto;
+        width: 2.68em;
+        height: 2.68em;
+        color: #1b214e;
+        display: block;
+        text-indent: -9999px;
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .share.photo-lightbox{
+        left: 0;
+        text-align: left;
+        padding: 20px 0 0 12px;
+    }
+}

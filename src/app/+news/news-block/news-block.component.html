@@ -1,0 +1,24 @@
+<div class="block {{customClass}}">
+    <h2 *ngIf="headerText">{{headerText}}</h2>
+    <ul class="news {{cols}}">
+        <li class="col grid" *ngFor="let n of news | slice:0:count"
+        [class.selected]="n === selectedNews">
+            <div class="item-wrapper col">
+                <div (click)="gotoDetail(n)" class="thumbnail" [innerHTML]="n.thumbnail"></div>
+                <div class="body">
+                    <div *ngIf="!minimal" class="created">{{n.created}}</div>
+                    <h3 (click)="gotoDetail(n)">{{n.title}}</h3>
+                    <div *ngIf="!minimal" [innerHTML]="n.body"></div>                    
+                </div>
+                <div *ngIf="!minimal" class="footer">                    
+                    <div class="readMore" (click)="gotoDetail(n)" >Continue Reading &rarr;</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div *ngIf="viewMore" class="viewMore">
+        <a (click)="fetchNextPage()">
+            
+        </a>
+    </div>
+</div>

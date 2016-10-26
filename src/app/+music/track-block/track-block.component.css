@@ -1,0 +1,211 @@
+audio {
+    display: none;
+}
+.audio li:hover {
+    background-color: #e8e8ef;
+    color: #000;
+}
+.audio{
+    position: relative;
+}
+.audio li.selected {
+    background-color: #000;
+}
+
+.item-wrapper {
+    padding: 20px;
+}
+.audio li {
+    color: #1b214e;
+    position: relative;
+}
+.track-name {
+    font-size: 16px;
+    padding: 18px 0 8px 0;
+}
+.album-name,a{
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 25px;
+    color: #1b214e;
+}
+li.selected .track-name,li.selected .album-name,li.selected a{ 
+    color: #ffffff;
+}
+h2{
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 33px;
+    padding-top: 0;
+    font-weight: 600;
+    color: #807c9c;
+    display: inline-block;
+}
+.spotifyFollow {
+    display: inline-block;
+    right: -42px;
+    position: absolute;
+}
+.footer {
+    color: #359be9;
+    font-size: 14px;
+}
+
+.thumbnail:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27,33,78,0.78);
+}
+.thumbnail{
+    position:relative;
+    font-size:0;
+}
+
+.block img {
+    min-height: 152px;
+}
+
+.fulltrack a {
+    display: none;
+}
+li.selected .fulltrack a {
+    display: inline-block;
+    padding: 8px 15px;    
+    font-size: 14px;
+    border: 2px solid #6b6c75;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+li.selected .fulltrack a:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #040514;
+    border-radius: 2px;
+}
+.fulltrack {
+    text-align: center;
+}
+
+.side_drawer {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background: #000;
+    z-index: 3;
+    transition: .25s ease-in-out;    
+    color: #f6f5fd;
+    overflow-y: scroll;
+}
+.side_drawer a {
+    color: #f6f5fd;
+    display: block;
+    width: 130px;
+    text-indent: -9999px;
+    margin: 0 auto;
+    height: 43px;
+    padding-bottom: 35px;
+}
+.side_drawer.show{
+    right: 0;
+}
+.sd_overall.show{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    background: #1b214e;
+}
+.sd_overall{
+    display: none;
+}
+.side_drawer .close {
+    font-size: 25px;
+    color: #f6f5fd;
+    float: right;
+    padding: 10px 15px 0 0;
+    cursor: pointer;
+}
+.side_drawer .Amazon{
+    background: url("assets/i/amazon-sd.png") no-repeat;
+}
+.side_drawer .iTunes{
+    background: url("assets/i/itunes-sd.png") no-repeat;
+}
+
+.side_drawer .stream .iTunes{
+    background: url("assets/i/itunes_stream-sd.png") no-repeat;
+}
+
+.side_drawer .Store{
+    background: url("assets/i/store-sd.png") no-repeat;
+}
+
+.side_drawer .Google.Play{
+    background: url("assets/i/google_play-sd.png") no-repeat;
+}
+.side_drawer .Spotify{
+    background: url("assets/i/spotify-sd.png") no-repeat;
+}
+.side_drawer .stream .Google.Play{
+    background: url("assets/i/google_play_stream-sd.png") no-repeat;
+}
+.side_drawer .Tidal{
+    background: url("assets/i/tidal-sd.png") no-repeat;
+}
+
+.download {
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 105px;
+}
+.stream span,.download span {
+    text-align: center;
+    display: block;
+    padding-bottom: 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+    h2{
+        padding-bottom: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .track-name {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .album-name{
+        text-align: center;
+        padding-bottom: 0;
+    }
+    li.selected .album-name{
+        padding-bottom: 35px;
+    }
+    .spotifyFollow{
+        top: 14px;
+        right: 0;
+    }
+    .side_drawer.show{
+        color: #1b214e;
+        background: #f6f5fd;
+    }
+    .stream span,.download span {
+        font-size: 16px;
+    }
+}

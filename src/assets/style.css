@@ -1,0 +1,344 @@
+/*Common Styles*/
+html { width: 100vw;max-width: 100%; }
+body {
+  font-family: proxima-nova, Arial, Helvetica, sans-serif;
+  color:#1b214e;
+  background-color: #f6f5fd;
+  line-height: 1;
+  box-sizing: border-box;
+  font-weight: 300;  
+  padding-top: 50px;
+}
+a {
+  color: #359be9;
+  text-decoration: none;
+}
+p{
+  margin: 0;
+  line-height: 1.5
+}
+img {
+    width: 100%;
+    height: auto;
+}
+/*reset library styles*/
+.col {
+  padding-right: 1rem;
+  padding-left:1rem;
+  margin-bottom: 1rem;
+}
+
+ul[class*=grid] {
+    margin: 0 -1rem;
+}
+nav.g-layout {
+  padding: 17px 0;
+  text-align: center;
+}
+/*Container Styles*/
+/*
+$mq-mobile-narrower: "only screen and (max-width : 320px)";
+$mq-mobile-wider: "only screen and (min-width : 320px)";
+
+$mq-tablet-narrower: "only screen and (max-width : 767px)";
+$mq-tablet-wider: "only screen and (min-width : 768px)";
+
+$mq-desktop-narrower: "only screen and (max-width : 1023px)";
+$mq-desktop-wider: "only screen and (min-width : 1024px)";
+
+$mq-large-desktop-narrower: "only screen and (max-width : 1379px)";
+$mq-large-desktop-wider: "only screen and (min-width : 1380px)";
+
+$mq-tablet: "only screen and (min-width : 768px) and (max-width : 1023px)";
+$mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
+
+*/
+
+/*Block Stylings*/
+.g-layout {
+  width: 100%;
+  padding: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.g-layout h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    font-weight:300; 
+}
+
+.g-layout h2 span{
+    font-weight:bold;    
+}
+
+@media (min-width: 768px) {
+  .g-layout {
+    width: 767px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }	
+}
+@media (min-width: 1024px) {
+	.g-layout {
+    width: 968px;
+    margin: 0 auto;
+  }
+  .g-layout h2{
+    padding-top: 50px;
+    padding-bottom: 45px;
+    margin: 0;
+  }
+  .heroBlock .button2 {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1380px) {
+	.g-layout {
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+/*Elements in the block*/
+.block h2 {
+  text-align: center;
+  font-size:30px; 
+  padding-bottom: 30px; 
+  text-transform: uppercase;
+ }
+ 
+.block img { width: 100%; height: auto; }
+
+.block h3 {text-transform: uppercase; line-height: 1.5}
+
+.items li{
+  display:inline-block;
+  width: 33%;
+  margin-left: -4px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.button{
+  background-color: transparent;  
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 13px 57px;
+  border: 2px solid #1b214e;
+  line-height: 1;
+  font-size: 19px;
+  color:#1b214e;
+  cursor: pointer;
+}
+
+.button:hover{
+  color: #1b214e;
+  background-color: #fff;
+}
+
+.reverse-button {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+app-news-block,app-video-block,app-photo-block,app-music,app-track-block,
+app-news-detail,app-photos-detail,app-videos-detail,app-tour-block,app-block,app-social-buttons {display:block;}
+
+app-lightbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 5, 8, 0.8);
+}
+
+.heroBlockCon {
+    background: url(i/bg_hero.jpg) no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+@media only screen and (max-width: 767px) {
+  .heroBlockCon {
+    min-height: 350px;
+  }
+}
+.heroBlock {
+    text-align: center;
+    padding-top: 14%;
+}
+.heroBlock h1{
+  margin: 0;
+  font-size: 68px;
+  text-transform: uppercase;
+  margin-bottom:30px;
+  font-weight:300;  
+}
+.heroBlock span {
+    font-weight: bold;
+}
+
+app-photo-detail {
+    background-color: #1d1e20;
+}
+
+app-home{
+  color: #fff;
+}
+
+/* responsive video container */
+.responsive-video-container,.iframeWrapper.Youtube,.iframeWrapper.Deezer {
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.responsive-video-container object, 
+.responsive-video-container iframe,.iframeWrapper.Youtube iframe,.iframeWrapper.Deezer iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+.latest-video .responsive-video-container .media{
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+/* Footer Stuff */
+.footer-block{
+	background: #b8b7bf;
+	font-size:14px;	
+	text-align: center;
+  padding: 43px 10px;
+}
+.footer-social li a{
+  background: transparent url("http://startersitev502.wmg-gardens.com/sites/g/files/g2000004816/f/201607/footer-social.png") no-repeat scroll 0 0;
+  clear: both;
+  margin: 0 auto;
+  width: 2.68em;
+  height: 2.68em;
+  color:#1b214e;
+  display: block;
+  margin-right: 1.25em;
+  text-indent: -9999px;
+}
+
+.footer-social li {
+  display: inline-block;
+}
+
+.footer-social li a.fs-fb-link {
+  width: 0.875em;
+}
+.footer-block .copyright-bar{
+	margin-top: 35px;
+	color: #1b214e;
+	letter-spacing: 3px;
+}
+.footer-block .copy{
+	margin-bottom: 18px;
+}
+.footer-block .footer-links a{
+	color: #1b214e;
+	white-space: nowrap;
+}
+.footer-social li.fs-ig a {
+    background-position: -61px 0px;
+}
+.footer-social li.fs-tw a {
+    background-position: -123px 0px;
+}
+.footer-social li.fs-sp a {
+    background-position: -186px 0px;
+}
+.footer-social li.fs-pin a {
+    background-position: -253px 0px;
+}
+.footer-social li.fs-yt a {
+    background-position: -315px 0px;
+}
+.footer-social li.fs-vi a {
+    background-position: -381px 0px;
+}
+
+a.cta {
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 13px 55px;
+    border: 1px solid #1b214e;
+    line-height: 1;
+    font-size: 19px;
+    color: #1b214e;
+    cursor: pointer;
+    margin: 0 auto;
+}
+a.cta:hover{
+  background: #1b214e;
+  color: #fff;
+}
+
+div.cta{
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  div.cta {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+	.footer-block .footer-social .social-links{
+		display: block;
+		margin-bottom: 25px;
+	}
+	.footer-block .footer-social .social-pyv{
+		display: block;
+	}
+}
+
+/**/
+.logo-block a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.login-menu {
+  display: none;
+  font-size: 14px;
+}
+@media only screen and (min-width: 1024px) {
+  .login-menu {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    display:block;
+  }
+}
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #f6f5fd;
+    z-index: 2;
+}
+
+

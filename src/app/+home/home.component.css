@@ -1,0 +1,102 @@
+.newsPanel{background: url(assets/i/bg_news.jpg) no-repeat;background-size: cover;}
+.videoPanel {background: url("assets/i/bg_videos.jpg") no-repeat;background-size: cover; background-position: center center;}
+.photoPanel {background-color: #1d1e20;}
+.tourPanel {background-color:#1d1e20;}
+.merchPanel {background-color:#0d0e1c;display: block;}
+.homePanelCon .buttonWrapper {text-align: center;padding-bottom: 50px; padding-top: 80px;}
+.musicPanel {
+    color: #1d1e20;
+    background: #e4e4e4;
+}
+.tourPanel .g-layout{
+   padding-top: 20px;
+   position: relative;
+}
+.heroBlock a {
+    cursor: pointer;
+}
+.homepage-tour-track {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+}
+.musicPanel h2{
+    padding-top: 40px;
+    padding-bottom: 62px;
+}
+.music-content h2 {
+    padding: 0;
+    font-size: 19px;
+}
+.players > div{
+    display: inline-block;
+    padding-right: 60px;
+}
+.players div:last-child{
+    padding-right: 0;
+}
+.players span {
+    margin-top: 10px;
+    display: block;
+}
+.spotify div{
+    background: url("assets/i/spotify.png") no-repeat;
+    height: 40px;
+    width: 40px;
+}
+.apple div{
+    background: url("assets/i/apple.png") no-repeat;
+    height: 40px;
+    width: 35px;
+}
+.youtube div{
+    background: url("assets/i/youtube.png") no-repeat;
+    height: 28px;
+    width: 42px;
+}
+.soundcloud div{
+    background: url("assets/i/soundcloud.png") no-repeat;
+    height: 28px;
+    width: 62px;
+}
+.players {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.players div div {
+    display: block;
+    margin: 0 auto;
+}
+.homePanelCon.musicPanel .button:hover {
+    background: #1d1e20;
+    color: #fff;
+    font-weight: 600;
+}
+@media only screen and (max-width: 767px) {
+    .homePanelCon.tourPanel .buttonWrapper{
+        padding-bottom: 153px;
+        padding-top: 68px;
+    }
+    .homepage-tour-track {
+        right: auto;
+        top: auto;
+        text-align: center;
+        bottom: 65px;
+        width: 100%;
+        left: 0;
+    }
+    .musicPanel h2{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .players > div{
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+

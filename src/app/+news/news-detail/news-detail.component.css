@@ -1,0 +1,40 @@
+.block {
+ color:#1b214e;
+ font-size: 19px;
+}
+
+.g-layout h2 {
+    text-align: left; 
+    font-weight: 600;
+}
+
+img {
+    width: auto;
+}
+
+.created{
+    color: #807c9c;
+    font-size: 19px;
+    padding: 40px 0 20px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.block p a{
+ color:#359BE9;
+}
+
+.g-layout img {
+    width:100%;
+    height:auto;
+}
+.detail-list .g-layout{
+    position: relative;
+}
+
+@media screen and (min-width:1024px){
+    .content{
+        width: 90%;
+        margin: 0 auto;
+    }
+}

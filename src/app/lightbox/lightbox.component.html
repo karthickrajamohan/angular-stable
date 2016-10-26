@@ -1,0 +1,14 @@
+<div class="lightbox">
+    <div class="close_wrapper">
+        <a class="close" (click)="closed()">x</a>
+    </div>
+    <div *ngIf="photo">
+        <div class="image"><img [src]="photo[selectedIndex].field_photo" /></div>
+        <h2>{{photo[selectedIndex].title}}</h2>
+        <div class="navigator">
+            <span (click)="prevPhoto()">&lt; Previous | </span><span (click)="nextPhoto()">Next &gt;</span>
+        </div>
+    </div>
+    <app-social-buttons [customClass]="'photo-lightbox'" [link]='photo[selectedIndex].title'></app-social-buttons>
+</div>
+<div class="lightbox_overall" (click)="closed()"></div>    

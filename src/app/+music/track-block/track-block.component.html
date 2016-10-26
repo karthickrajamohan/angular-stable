@@ -1,0 +1,36 @@
+<div class="audio block">
+    <h2>Top Tracks</h2>
+    <app-block blockID="51" class="spotifyFollow"></app-block>
+    <ul class="audio {{cols}}">
+        <li class="col grid" *ngFor="let a of audio; let i = index" *ngIf="a" [class.selected]="a.isPlaying">
+            <div class="item-wrapper col">
+                <!--<div class="thumbnail">
+                    <img [src]='a.albumArt' />
+                </div>-->
+                <div class="body">
+                    <app-custom-audio *ngIf="a.source" [src]='a.source' [albumart]='a.albumArt' (playerStateChange)="onAudioPlayerStateChange($event,i )">
+                    </app-custom-audio>
+                    <div class="track-name" [innerHTML]='a.title'></div>
+                    <div class="album-name">{{a.albumName}} <a href="{{a.albumLink}}">(View)</a></div>
+                    <div class="fulltrack">
+                        <a (click)="toggleSideDrawer(a)">FULL TRACK</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div [class.show]="showSideDrawer" class="side_drawer">
+    <span class="close" (click)="toggleSideDrawer()">x</span>
+    <div *ngIf="sidedrawercontent">
+        <div class="download">
+            <span>OWN IT</span>
+            <a class="{{key}}" target="_blank" *ngFor="let key of fieldCollectionservices;let i = index" href="{{sidedrawercontent.field_download_links[i][key]}}">{{key}}</a>
+        </div>
+        <div class="stream">
+            <span>STREAM IT</span>
+            <a class="{{key}}" target="_blank" *ngFor="let key of fieldStreamingServices;let i = index" href="{{sidedrawercontent.field_streaming_links[i][key]}}">{{key}}</a>
+        </div>
+    </div>
+</div>
+<div (click)="toggleSideDrawer()" [class.show]="showSideDrawer" class="sd_overall"></div>

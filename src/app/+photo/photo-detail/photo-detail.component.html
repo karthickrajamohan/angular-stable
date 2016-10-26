@@ -1,0 +1,12 @@
+<div class="g-layout">
+    <div *ngIf="photo">
+        <h2  [innerHTML]="photo.title" ></h2>
+        <div class="updated">{{photo.changed}}</div>
+        <div class="photo" [innerHTML]="photo.field_photo"></div>
+        <div [innerHTML]="photo.body"></div>
+    </div>
+    <app-social-buttons class="news-detail-social" [link]='id'></app-social-buttons>
+    <div class="gallery-link">
+        <a [routerLink]="['/photo']">VIEW GALLERY</a>
+    </div>
+</div>

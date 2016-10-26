@@ -1,0 +1,11 @@
+<div class="detail-list">
+	<div class="g-layout">
+		<div class="content" *ngIf="news">
+			<h2>{{news.title}}</h2>
+			<div [innerHTML]="news.thumbnail"></div>
+			<div class="created">{{news.created}}</div>
+			<div [innerHTML]="news.body"></div>
+		</div>
+		<app-social-buttons [link]='id'></app-social-buttons>
+	</div>
+</div>
