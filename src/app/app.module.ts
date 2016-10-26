@@ -30,6 +30,7 @@ import {NewsBlockComponent} from './+news/news-block/news-block.component';
 import { NewsService } from "./+news/news.service";
 import {NewsComponent} from './+news/news.component';
 import { NewsListComponent } from './+news/news-list/news-list.component';
+import { NewsDetailComponent } from './+news/news-detail/news-detail.component';
 
 import {PhotoBlockComponent} from './+photo/photo-block/photo-block.component';
 import {Photo,PhotoService} from './+photo/photo.service';
@@ -51,7 +52,7 @@ import {TaxonomyListComponent} from './taxonomy-list/taxonomy-list.component'
     VideoListComponent,VideoDetailBlockComponent,BlockComponent,HomeComponent,TourComponent,
     TourSearch,TourBlockComponent,NewsBlockComponent,PhotoBlockComponent,LightboxComponent,SocialButtonsComponent,
     NewsComponent,NewsListComponent,VideoDetailComponent,PhotoComponent,PhotoListComponent,PhotoDetailComponent,
-    TaxonomyListComponent
+    TaxonomyListComponent,NewsDetailComponent
   ],
   imports: [
     BrowserModule,

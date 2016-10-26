@@ -8,6 +8,7 @@ import {VideoDetailComponent} from './+video/video-detail/video-detail.component
 
 import { NewsComponent } from './+news/news.component';
 import { NewsListComponent } from './+news/news-list/news-list.component';
+import { NewsDetailComponent } from './+news/news-detail/news-detail.component';
 
 import {PhotoComponent} from './+photo/photo.component';
 import {PhotoListComponent} from './+photo/photo-list/photo-list.component'; 
@@ -44,6 +45,10 @@ const routes: Routes = [
             {
                 path: '',
                 component: NewsListComponent
+            },
+            {
+                path: ':id',
+                component: NewsDetailComponent
             }
         ]
     },

@@ -48,6 +48,7 @@ export class NewsBlockComponent implements OnInit {
     onSelect(news: News) {
         this.selectedNews = news;
     }
+    
     ngOnInit (){
       this.news = this.getNews();
       if (!this.cols){
