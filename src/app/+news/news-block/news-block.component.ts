@@ -42,11 +42,8 @@ export class NewsBlockComponent implements OnInit {
         let id:string;
         this.selectedNews = news;
         id = Utils.getSlug(this.selectedNews.path);
-        this._router.navigate([this.detailPath + `/${id}`]);
-    }
-
-    onSelect(news: News) {
-        this.selectedNews = news;
+        let link = ['/news',id];
+        this._router.navigate(link);
     }
     
     ngOnInit (){
