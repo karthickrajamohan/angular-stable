@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import {Router } from '@angular/router';
 import {Utils} from '../../utils';
 import {Audio, MusicService} from '../music.service';
 import {SpotifyService} from '../spotify.service';
-
 
 @Component({
   
@@ -28,6 +27,7 @@ export class TrackBlockComponent implements OnInit {
   constructor(private _musicService: MusicService,
     private _router: Router,
     private _spotifyService: SpotifyService) { }
+    
   getAudio() {
     this.selectedAudio = undefined;
     this.audio = [];

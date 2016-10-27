@@ -15,8 +15,10 @@ export class VideoDetailComponent  {
   constructor(private _videoService: VideoService, private route: ActivatedRoute, private router: Router) {
   }
   
-  ngOnInit() {
-      this.id ="hunhunter-hayes-i-want-crazy-official-music-video-246";
+  ngOnInit():void {      
+    this.route.params.forEach((params: Params) => {      
+      this.id = params['id'];
+    });
   }
 
 }

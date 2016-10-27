@@ -43,14 +43,7 @@ export class VideoBlockComponent implements OnInit {
         let link = ['/video',id];
         this._router.navigate(link);
     }
-
-    /*onSelect(video: Video) {
-        let id:string;
-        this.selectedVideo = video;
-        id = Utils.getSlug(this.selectedVideo.path);
-        this._router.navigate([this.detailPath + `/${id}`]);
-    }*/
-    
+ 
     ngOnInit (){
       this.videos = this.getVideos();
       if (!this.cols){

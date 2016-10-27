@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-
   selector: 'app-custom-audio',
   templateUrl: 'custom-audio.component.html',
   styleUrls: ['custom-audio.component.css']

@@ -15,7 +15,7 @@
       </div>
       <div class="embed">
         <div [ngSwitch]="visibleEmbed" *ngFor="let list of embedList">
-          <div *ngSwitchWhen="list.service" [innerHTML]="list.embed" class="iframeWrapper {{list.service}}"></div>
+          <div *ngSwitchCase="list.service" [innerHTML]="list.safeHtml" class="iframeWrapper {{list.service}}"></div>
         </div>
       </div>
     </div>

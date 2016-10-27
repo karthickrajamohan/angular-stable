@@ -7,16 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['tour-list.component.css'],
  
 })
-export class TourListComponent implements OnActivate {
-  private currSegment: RouteSegment;
+export class TourListComponent {
   public path: string;
 
   constructor() {}
 
-  routerOnActivate(curr: RouteSegment, prev: RouteSegment, currTree: RouteTree) {
-    this.currSegment = curr;
-    this.path="/tour";
-    /*We might not need this now! But we might need it later. Not sure man!*/
-  }
 
 }

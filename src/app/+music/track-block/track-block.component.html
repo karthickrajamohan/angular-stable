@@ -1,8 +1,8 @@
 <div class="audio block">
     <h2>Top Tracks</h2>
     <app-block blockID="51" class="spotifyFollow"></app-block>
-    <ul class="audio {{cols}}">
-        <li class="col grid" *ngFor="let a of audio; let i = index" *ngIf="a" [class.selected]="a.isPlaying">
+    <ul class="audio {{cols}}" *ngIf="audio" >
+        <li class="col grid" *ngFor="let a of audio; let i = index" [class.selected]="a.isPlaying">
             <div class="item-wrapper col">
                 <!--<div class="thumbnail">
                     <img [src]='a.albumArt' />

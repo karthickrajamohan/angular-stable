@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { VideoComponent } from './+video/video.component';
 import { VideoListComponent} from './+video/video-list/video-list.component';
-import {VideoDetailComponent} from './+video/video-detail/video-detail.component'
+import { VideoDetailComponent} from './+video/video-detail/video-detail.component'
 
 import { NewsComponent } from './+news/news.component';
 import { NewsListComponent } from './+news/news-list/news-list.component';
@@ -17,6 +17,14 @@ import { PhotoDetailComponent} from './+photo/photo-detail/photo-detail.componen
 import { AppComponent} from './app.component';
 
 import {HomeComponent} from './+home/home.component';
+
+import {TourComponent} from './+tour/tour.component';
+import {TourListComponent} from './+tour/tour-list/tour-list.component';
+
+import {MusicComponent} from './+music/music.component';
+import {MusicListComponent} from './+music/music-list/music-list.component';
+import {AlbumDetailComponent} from './+music/album-detail/album-detail.component';
+
 
 const routes: Routes = [
     {
@@ -61,7 +69,31 @@ const routes: Routes = [
                 component: PhotoListComponent
             }
         ]
-    }       
+    },
+    {
+        path:'tour',
+        component : TourComponent,
+        children: [
+            {
+                path: '',
+                component: TourListComponent
+            }
+        ]
+    },
+    {
+        path:'music',
+        component : MusicComponent,
+        children: [
+            {
+                path: '',
+                component: MusicListComponent
+            }
+        ]
+    },
+    {
+        path:'album/:id',
+        component : AlbumDetailComponent
+    }    
 ];
 
 // - Updated Export

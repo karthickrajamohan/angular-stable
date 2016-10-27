@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 
 import { Utils } from '../utils'
-import { environment } from '../environment';
+import { environment } from '../../environments/environment';
 
 export interface Audio {
     title: string;
@@ -32,6 +32,7 @@ export interface Embed {
     service: string;
     embed: string;
     nid: string;
+    safeHtml :any;
 }
 
 
@@ -70,7 +71,7 @@ export class MusicService {
     /* Used to get the list of embeds for each album */
     getAlbumEmdeds(id: string){
         let nid: string = Utils.getNID(id);
-        var url:string = '//' + environment.host + environment.albumEmbedEndpoint;
+        let url:string = '//' + environment.host + environment.albumEmbedEndpoint;
         return this.http.get(url + '?nid=' + nid)
         .map((res:Response) => res.json())
         .catch(this.handleError);

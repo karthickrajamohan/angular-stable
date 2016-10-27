@@ -2,7 +2,10 @@ import { Component, Input, OnInit, } from '@angular/core';
 import { MusicService, Album, Audio,Embed } from '../music.service';
 import { SocialButtonsComponent } from "../../shared/social-buttons";
 import { Utils } from "../../utils";
-import {NgSwitch, NgSwitchWhen, NgSwitchDefault} from '@angular/common';
+import {NgSwitch, NgSwitchDefault} from '@angular/common/index';
+import {Router,ActivatedRoute,Params } from '@angular/router'
+import {DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
 
@@ -11,7 +14,7 @@ import {NgSwitch, NgSwitchWhen, NgSwitchDefault} from '@angular/common';
   styleUrls: ['album-detail.component.css'],
    providers: [MusicService]
 })
-export class AlbumDetailComponent implements OnActivate {
+export class AlbumDetailComponent  {
   @Input() album: Album;
   public trackList: Audio[];
   public embedList:Embed[];
@@ -20,26 +23,36 @@ export class AlbumDetailComponent implements OnActivate {
   public selectedIndex :number = 0;
 
   constructor(private _musicService: MusicService,
-      private _router: Router) {}
+       private route: ActivatedRoute,private sanitizer: DomSanitizer) {}
 
-  routerOnActivate(curr: RouteSegment): void {
-    this.id = curr.getParam('id');
-    this._musicService.getAlbumDetail(this.id).subscribe(
+  ngOnInit(): void {
+    this.route.params.forEach((params: Params) => {
+      this._musicService.getAlbumDetail(params['id']).subscribe(
+        data => {
+          this.album = data[0];        
+          this.album.albumArt = Utils.getImageSrc(this.album.albumArt);
+        },
+        err => console.error(err),
+        () => console.log('done')
+      );
+      this._musicService.getAudioList(params['id']).subscribe(
+        data => {
+          this.trackList = data;
+        }
+      );
+    this._musicService.getAlbumEmdeds(params['id']).subscribe(
       data => {
-        this.album = data[0];
-        //this.album.streamingLinks = Utils.getArrayofObjects(data[0].streamingLinks);
-        this.album.albumArt = Utils.getImageSrc(this.album.albumArt);
-      },
-      err => console.log(err),
-      () => console.log('done')
-    );
-    this._musicService.getAudioList(this.id).subscribe(
-      data => {this.trackList = data;}
-    );
-    this._musicService.getAlbumEmdeds(this.id).subscribe(
-      data => {this.embedList = data;this.visibleEmbed =this.embedList[0].service}
-    );
+        this.embedList = data;
+        this.visibleEmbed =this.embedList[0].service;
+        for(let x =0; x < this.embedList.length;x++){
+          this.embedList[x].safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.embedList[x].embed.toString());
+        }        
+      }
+    );     
+
+    });
   }
+
   displayEmbed(list:Embed,i) {
     this.visibleEmbed = list.service;
     this.selectedIndex = i;

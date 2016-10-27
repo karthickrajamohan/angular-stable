@@ -2,7 +2,7 @@
 	<div *ngIf="video">
 		<!--<a [routerLink]="['/video']">&larr; Back to Videos </a>-->
 		<div class="video">
-			<div class="responsive-video-container" [innerHTML]="video.field_video"></div>
+			<div class="responsive-video-container" [innerHTML]="safeHtml"></div>
 		</div>
 		<div *ngIf="!minimal" class="header">
 			<h2>{{video.title}}</h2>
