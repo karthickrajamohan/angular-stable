@@ -1,0 +1,14 @@
+<div class="block merch">
+  <h2 *ngIf="headerText">{{headerText}}</h2>
+  <ul class="merch {{cols}}">
+    <li class="col" *ngFor="let m of merch | slice:0:count">
+      <div class="thumbnail">
+        <div [innerHTML]="m.product_image"></div>
+        <a class="button reverse-button readMore" href="{{m.store_link}}">VIEW</a>
+      </div>
+      <div class="text-container">
+        <h3>{{m.title}}</h3>
+      </div>
+    </li>
+  </ul>
+</div>
