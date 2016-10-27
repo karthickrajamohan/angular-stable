@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import {Utils} from '../../utils';
 import {Video, VideoService} from '../video.service';
+import { ActivatedRoute,Router,Params } from '@angular/router';
 
 @Component({
   selector: 'app-video-detail-block',
@@ -17,13 +18,13 @@ export class VideoDetailBlockComponent implements OnInit {
 
   public video: Video;
 
-  constructor(private _videoService: VideoService) {}
+  constructor(private _videoService: VideoService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this._videoService.getVideo(this.id,this.frontpage).subscribe(
-      data => this.video = data[0],
-      err => console.error(err),
-      () => console.log('done')
-    );
+      this._videoService.getVideo(this.id,true).subscribe(
+        data => this.video = data[0],
+        err => console.error(err),
+        () => console.log('video data done')
+      );
   }
 }

@@ -12,12 +12,11 @@ export class VideoDetailComponent  {
   @Input() video: Video;
   public id: string;
   
-  constructor(private _videoService: VideoService,
-      private route: ActivatedRoute, private router: Router) {
+  constructor(private _videoService: VideoService, private route: ActivatedRoute, private router: Router) {
   }
   
   ngOnInit() {
-    this.id = this.route.params['id'];
+      this.id ="hunhunter-hayes-i-want-crazy-official-music-video-246";
   }
 
 }
